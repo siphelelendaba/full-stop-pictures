@@ -1,6 +1,7 @@
 @import "tailwindcss" source(none);
 @source "../src";
 @import "tw-animate-css";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap");
 
 @custom-variant dark (&:is(.dark *));
 
@@ -59,29 +60,35 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+  --font-sans: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Montserrat", ui-sans-serif, system-ui, sans-serif;
 }
 
 :root {
   --radius: 0.625rem;
   --background: oklch(1 0 0);
-  --foreground: oklch(0.129 0.042 264.695);
+  --foreground: oklch(0.18 0.05 270);
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.129 0.042 264.695);
+  --card-foreground: oklch(0.18 0.05 270);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.129 0.042 264.695);
-  --primary: oklch(0.208 0.042 265.755);
-  --primary-foreground: oklch(0.984 0.003 247.858);
-  --secondary: oklch(0.968 0.007 247.896);
-  --secondary-foreground: oklch(0.208 0.042 265.755);
-  --muted: oklch(0.968 0.007 247.896);
-  --muted-foreground: oklch(0.554 0.046 257.417);
-  --accent: oklch(0.968 0.007 247.896);
-  --accent-foreground: oklch(0.208 0.042 265.755);
+  --popover-foreground: oklch(0.18 0.05 270);
+  /* Brand */
+  --brand-crimson: oklch(0.52 0.19 18);     /* #b5223c */
+  --brand-ink: oklch(0.27 0.08 285);        /* #2c2a4c */
+  --brand-rose: oklch(0.54 0.20 14);        /* #ba2454 */
+  --primary: var(--brand-crimson);
+  --primary-foreground: oklch(1 0 0);
+  --secondary: var(--brand-ink);
+  --secondary-foreground: oklch(1 0 0);
+  --muted: oklch(0.97 0.005 270);
+  --muted-foreground: oklch(0.45 0.03 270);
+  --accent: var(--brand-rose);
+  --accent-foreground: oklch(1 0 0);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.984 0.003 247.858);
-  --border: oklch(0.929 0.013 255.508);
-  --input: oklch(0.929 0.013 255.508);
-  --ring: oklch(0.704 0.04 256.788);
+  --border: oklch(0.92 0.01 270);
+  --input: oklch(0.92 0.01 270);
+  --ring: var(--brand-crimson);
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
@@ -140,5 +147,36 @@
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+    font-family: var(--font-sans);
+    font-feature-settings: "ss01", "cv11";
+    -webkit-font-smoothing: antialiased;
   }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+}
+
+@layer utilities {
+  .text-balance { text-wrap: balance; }
+  .bg-ink { background-color: #2c2a4c; }
+  .text-crimson { color: #b5223c; }
+  .bg-crimson { background-color: #b5223c; }
+  .border-crimson { border-color: #b5223c; }
+  .bg-rose-brand { background-color: #ba2454; }
+  .gradient-ink {
+    background: linear-gradient(135deg, #2c2a4c 0%, #1a1830 100%);
+  }
+  .gradient-crimson {
+    background: linear-gradient(135deg, #b5223c 0%, #ba2454 100%);
+  }
+  .hero-vignette {
+    background: linear-gradient(180deg, rgba(10,8,20,0.55) 0%, rgba(10,8,20,0.35) 40%, rgba(10,8,20,0.85) 100%);
+  }
+  .card-vignette {
+    background: linear-gradient(180deg, rgba(20,18,40,0) 30%, rgba(20,18,40,0.95) 100%);
+  }
+  .tracking-display { letter-spacing: -0.035em; }
+  .tracking-eyebrow { letter-spacing: 0.3em; }
 }
