@@ -67,12 +67,6 @@ export function SiteHeader() {
               </Link>
             );
           })}
-          <Link
-            to="/contact"
-            className="bg-crimson text-white text-[11px] font-semibold tracking-eyebrow uppercase px-5 py-3 hover:bg-rose-brand transition-colors"
-          >
-            Get in touch
-          </Link>
         </nav>
 
         <button
