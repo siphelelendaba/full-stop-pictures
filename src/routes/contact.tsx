@@ -8,7 +8,12 @@ export const Route = createFileRoute("/contact")({
       { name: "description", content: "Get in touch with Full Stop Pictures in Johannesburg." },
       { property: "og:title", content: "Contact Full Stop Pictures" },
       { property: "og:description", content: "Reach our team in Braamfontein, Johannesburg." },
+      { property: "og:image", content: "/og-image.jpg" },
+      { property: "og:url", content: "/contact" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "/og-image.jpg" },
     ],
+    links: [{ rel: "canonical", href: "/contact" }],
   }),
   component: ContactPage,
 });
@@ -21,10 +26,14 @@ function ContactPage() {
     <>
       <section className="bg-ink text-white pt-36 pb-20 md:pt-44 md:pb-28">
         <div className="mx-auto max-w-[1400px] px-6 lg:px-10">
-          <span className="text-[11px] font-semibold tracking-eyebrow uppercase text-crimson">Contact</span>
+          <span className="text-[11px] font-semibold tracking-eyebrow uppercase text-crimson">Get in touch</span>
           <h1 className="mt-5 max-w-4xl text-5xl md:text-7xl font-extrabold tracking-display text-balance leading-[1]">
             Let's create something<br/>worth telling<span className="text-crimson">.</span>
           </h1>
+          <p className="mt-6 max-w-2xl text-lg text-white/70 leading-relaxed">
+            Whether you're a broadcaster, brand or fellow storyteller — we'd love to hear from you.
+            Reach our Johannesburg studio directly via the channels below.
+          </p>
         </div>
       </section>
 
