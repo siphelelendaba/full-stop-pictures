@@ -10,7 +10,6 @@ export type Project = {
   type: string;
   duration: string;
   genre: string;
-  budget: string;
   impact: string;
   synopsis: string;
   image: string;
@@ -22,7 +21,6 @@ export const projects: Project[] = [
     type: "Docu-Series",
     duration: "45 mins x 6 Episodes — Season 1",
     genre: "Tourism",
-    budget: "R30 million",
     impact: "Promotes local tourism, boosts SME growth, and showcases South Africa's cultural richness.",
     synopsis:
       "This series explores South Africa's lesser-known tourist destinations, blending cultural heritage with entrepreneurial innovation. It aims to inspire local pride while attracting global interest, positioning South Africa as a hub for unique and sustainable tourism while shining a light on local SMMEs.",
@@ -33,7 +31,6 @@ export const projects: Project[] = [
     type: "Film",
     duration: "90 mins",
     genre: "Dark Comedy / Thriller",
-    budget: "R40 million",
     impact: "Employs diverse cast and crew, creates dialogue around economic struggles.",
     synopsis:
       "Set in Johannesburg, this film follows four supermarket employees who decide to defraud their own store in efforts to relieve their economic burdens. Their comedic and chaotic journey explores themes of resilience, desperation, and friendship, subtly addressing societal issues such as inequality and debt in South Africa.",
@@ -44,7 +41,6 @@ export const projects: Project[] = [
     type: "Film",
     duration: "100 mins",
     genre: "True Life Drama",
-    budget: "R30 million",
     impact: "Raises awareness about LGBTQ+ rights and justice, empowers underrepresented voices.",
     synopsis:
       "Based on true events, this film delves into the 2016 murder of Lesley Makousa, a beloved LGBTQ+ teenager. The narrative examines the community's grief, the fight for justice, and the broader challenges faced by the LGBTQ+ community in what is known to be a constitutionally progressive country; South Africa.",
@@ -55,7 +51,6 @@ export const projects: Project[] = [
     type: "Film",
     duration: "90 mins",
     genre: "Inspiring Fiction",
-    budget: "R16 million",
     impact: "Highlights mental health issues, creates dialogue on societal reintegration post military life.",
     synopsis:
       "Selaelo, a soldier dealing with trauma and financial instability, faces a crossroads after being forced out of the military. As she transitions into civilian life, her struggles with post-traumatic stress lead her into a world of crime. The film captures her journey of redemption and resilience.",
@@ -66,7 +61,6 @@ export const projects: Project[] = [
     type: "Film",
     duration: "100 mins",
     genre: "Fictional Drama",
-    budget: "R30 million",
     impact: "Promotes themes of mentorship and youth empowerment, encourages international collaborations.",
     synopsis:
       "A former Norwegian figure skater battling addiction mentors a South African teenager with Olympic aspirations. This heartfelt story emphasizes perseverance, mentorship, and the power of second chances, transcending cultural barriers.",
@@ -77,7 +71,6 @@ export const projects: Project[] = [
     type: "Film",
     duration: "100 mins",
     genre: "Fictional Drama",
-    budget: "R30 million",
     impact: "Explores themes of reinvention, deception, and survival, shedding light on the allure and consequences of ambition in a high-stakes, crime-driven world.",
     synopsis:
       "The film follows Paula Peters, a 32-year-old materialistic woman who loses her perfect life in a messy divorce. Desperate to reclaim her home, she teams up with Jacob, a street vendor, to pull off an art theft scheme. Joining his skilled crew, Paula uses her charm and sales expertise to navigate the black-market art world, all while staying on the good side of their dangerous employer, known only as 'Boss.' But when the stolen artwork stops coming in and pressure mounts from her vengeful ex, legal troubles, and a brewing betrayal, Paula turns to forgery — risking everything.",

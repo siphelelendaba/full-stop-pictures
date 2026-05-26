@@ -11,7 +11,12 @@ export const Route = createFileRoute("/")({
       { name: "description", content: "A 100% black female-owned production company telling authentic African stories for global audiences." },
       { property: "og:title", content: "Full Stop Pictures" },
       { property: "og:description", content: "Cinematic African stories, by Africans." },
+      { property: "og:image", content: "/og-image.jpg" },
+      { property: "og:url", content: "/" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "/og-image.jpg" },
     ],
+    links: [{ rel: "canonical", href: "/" }],
   }),
   component: Index,
 });
@@ -23,20 +28,25 @@ function Index() {
     <>
       {/* HERO */}
       <section className="relative h-[100svh] min-h-[640px] w-full overflow-hidden bg-black">
-        <img
-          src={hero}
-          alt="Full Stop Pictures on set"
-          width={1920}
-          height={1080}
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          poster={hero}
           className="absolute inset-0 h-full w-full object-cover"
-        />
+        >
+          <source src="/media/our-work.mov" type="video/quicktime" />
+          <source src="/media/our-work.mov" type="video/mp4" />
+        </video>
         <div className="absolute inset-0 hero-vignette" />
         <div className="relative z-10 mx-auto flex h-full max-w-[1400px] flex-col justify-end px-6 lg:px-10 pb-24 md:pb-32">
           <span className="text-[11px] font-semibold tracking-eyebrow uppercase text-white/70">
             Full Stop Pictures · Est. South Africa
           </span>
-          <h1 className="mt-5 max-w-4xl text-balance text-5xl md:text-7xl lg:text-8xl font-extrabold text-white tracking-display leading-[0.95]">
-            Authentic African<br />stories<span className="text-crimson">.</span> Told boldly<span className="text-crimson">.</span>
+          <h1 className="mt-5 max-w-6xl text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-extrabold text-white tracking-display leading-[0.95]">
+            <span className="block whitespace-nowrap">Authentic African Stories<span className="text-crimson">.</span></span>
+            <span className="block">Told boldly<span className="text-crimson">.</span></span>
           </h1>
           <p className="mt-6 max-w-xl text-base md:text-lg text-white/75 leading-relaxed">
             A 100% black female-owned production company crafting cinematic narratives that
@@ -108,7 +118,11 @@ function Index() {
                 <div className="absolute inset-0 card-vignette" />
                 <div className="absolute inset-x-0 bottom-0 p-7 text-white">
                   <div className="text-[10px] tracking-eyebrow uppercase text-crimson font-semibold">{p.type} · {p.genre}</div>
-                  <h3 className="mt-2 text-2xl font-extrabold tracking-display">{p.title}</h3>
+                  <h3 className="mt-2 text-2xl font-extrabold tracking-display leading-tight">{p.title}</h3>
+                  <p className="mt-3 text-xs text-white/70 leading-relaxed line-clamp-3">{p.synopsis}</p>
+                  <div className="mt-4 inline-flex items-center gap-2 text-[10px] tracking-eyebrow uppercase text-white/80 group-hover:text-crimson transition-colors">
+                    Explore <ArrowRight size={12} />
+                  </div>
                 </div>
               </Link>
             ))}
