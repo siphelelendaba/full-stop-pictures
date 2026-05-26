@@ -19,7 +19,15 @@ export const Route = createFileRoute("/projects")({
   component: ProjectsPage,
 });
 
-const sipheClips = [
+type Clip = {
+  title: string;
+  kind: string;
+  embed?: string;
+  video?: string;
+  href: string | null;
+};
+
+const sipheClips: Clip[] = [
   {
     title: "Lil'th",
     kind: "Instagram Reel",
@@ -29,7 +37,6 @@ const sipheClips = [
   {
     title: "Jitney",
     kind: "Featurette",
-    embed: null,
     href: "https://we.tl/t-WQ1gHRFLS4Zxy6UO",
   },
   {
@@ -38,7 +45,7 @@ const sipheClips = [
     video: "/media/our-work.mov",
     href: null,
   },
-] as const;
+];
 
 function ProjectsPage() {
   return (
@@ -131,7 +138,7 @@ function ProjectsPage() {
             {sipheClips.map((c) => (
               <div key={c.title} className="group">
                 <div className="relative aspect-[9/16] overflow-hidden bg-black border border-white/10">
-                  {"video" in c && c.video ? (
+                  {c.video ? (
                     <video
                       src={c.video}
                       controls
