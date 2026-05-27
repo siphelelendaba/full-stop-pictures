@@ -1,7 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Link } from "@tanstack/react-router";
 import { ArrowRight, Play } from "lucide-react";
-import hero from "@/assets/hero.jpg";
 import { projects } from "@/data/projects";
 
 export const Route = createFileRoute("/")({
@@ -33,7 +32,6 @@ function Index() {
           loop
           muted
           playsInline
-          poster={hero}
           className="absolute inset-0 h-full w-full object-cover"
         >
           <source src="/media/our-work.mov" type="video/quicktime" />
@@ -44,7 +42,7 @@ function Index() {
           <span className="text-[11px] font-semibold tracking-eyebrow uppercase text-white/70">
             Full Stop Pictures · Est. South Africa
           </span>
-          <h1 className="mt-5 max-w-6xl text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-extrabold text-white tracking-display leading-[0.95]">
+          <h1 className="mt-5 max-w-6xl text-[clamp(1.5rem,7vw,2.75rem)] md:text-7xl lg:text-8xl font-extrabold text-white tracking-display leading-[1.02] md:leading-[0.95]">
             <span className="block whitespace-nowrap">Authentic African Stories<span className="text-crimson">.</span></span>
             <span className="block">Told boldly<span className="text-crimson">.</span></span>
           </h1>
@@ -53,12 +51,6 @@ function Index() {
             celebrate women empowerment, cultural diversity and creative nuance.
           </p>
           <div className="mt-10 flex flex-wrap items-center gap-4">
-            <Link
-              to="/projects"
-              className="inline-flex items-center gap-3 bg-crimson hover:bg-rose-brand text-white text-[12px] font-semibold tracking-eyebrow uppercase px-7 py-4 transition-colors"
-            >
-              View the slate <ArrowRight size={16} />
-            </Link>
             <Link
               to="/about"
               className="inline-flex items-center gap-3 text-white text-[12px] font-semibold tracking-eyebrow uppercase px-2 py-4 border-b border-white/40 hover:border-white"
@@ -92,7 +84,7 @@ function Index() {
         <div className="mx-auto max-w-[1400px] px-6 lg:px-10 py-24 md:py-32">
           <div className="flex items-end justify-between flex-wrap gap-6">
             <div className="max-w-2xl">
-              <span className="text-[11px] font-semibold tracking-eyebrow uppercase text-crimson">Featured slate</span>
+              <span className="text-[11px] font-semibold tracking-eyebrow uppercase text-crimson">Featured work</span>
               <h2 className="mt-4 text-4xl md:text-5xl font-extrabold tracking-display text-balance">
                 Stories shaping the future of African cinema.
               </h2>

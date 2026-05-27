@@ -161,6 +161,7 @@
 @layer utilities {
   .text-balance { text-wrap: balance; }
   .bg-ink { background-color: #2c2a4c; }
+  .text-ink-brand { color: #2c2a4c; }
   .text-crimson { color: #b5223c; }
   .bg-crimson { background-color: #b5223c; }
   .border-crimson { border-color: #b5223c; }
