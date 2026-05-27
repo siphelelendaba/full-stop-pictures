@@ -22,15 +22,16 @@ export function SiteFooter() {
             <li><Link to="/" className="hover:text-white">Home</Link></li>
             <li><Link to="/about" className="hover:text-white">About</Link></li>
             <li><Link to="/projects" className="hover:text-white">Projects</Link></li>
+            <li><Link to="/services" className="hover:text-white">Services</Link></li>
           </ul>
         </div>
 
         <div>
           <h4 className="text-[11px] font-semibold tracking-eyebrow uppercase text-white mb-4">Contact</h4>
           <ul className="space-y-3 text-sm">
-            <li><a href="tel:+27727752307" className="hover:text-white">072 775 2307</a></li>
+            <li><a href="tel:+27799454833" className="hover:text-white">079 945 4833</a></li>
             <li><a href="mailto:info@fullstoppictures.com" className="hover:text-white">info@fullstoppictures.com</a></li>
-            <li className="text-white/60">44 Stanley Ave, Braamfontein Werf, Johannesburg 2092</li>
+            <li className="text-white/60">36 Wroxham Road, Paulshof, Sandton</li>
           </ul>
         </div>
       </div>
