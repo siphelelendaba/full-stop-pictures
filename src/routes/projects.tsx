@@ -1,5 +1,4 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { projects } from "@/data/projects";
 import { ExternalLink, Play } from "lucide-react";
 
 export const Route = createFileRoute("/projects")({
@@ -121,65 +120,6 @@ function ProjectsPage() {
         </div>
       </section>
 
-      <section className="bg-background pt-20 md:pt-24">
-        <div className="mx-auto max-w-[1400px] px-6 lg:px-10 pb-24 md:pb-32 space-y-28 md:space-y-40">
-          {projects.map((p, idx) => {
-            const reverse = idx % 2 === 1;
-            return (
-              <article
-                key={p.title}
-                className={[
-                  "grid gap-10 md:gap-16 items-center md:grid-cols-2",
-                  reverse ? "md:[&>:first-child]:order-2" : "",
-                ].join(" ")}
-              >
-                <div className="relative aspect-[4/3] overflow-hidden bg-ink">
-                  <img
-                    src={p.image}
-                    alt={p.title}
-                    width={1280}
-                    height={800}
-                    loading="lazy"
-                    className="absolute inset-0 h-full w-full object-cover"
-                  />
-                  <div className="absolute left-0 top-6 bg-crimson text-white text-[10px] tracking-eyebrow uppercase font-semibold px-4 py-2">
-                    {p.type}
-                  </div>
-                </div>
-
-                <div>
-                  <div className="text-[11px] font-semibold tracking-eyebrow uppercase text-crimson">
-                    {String(idx + 1).padStart(2, "0")} · {p.genre}
-                  </div>
-                  <h2 className="mt-3 text-4xl md:text-6xl font-extrabold tracking-display text-balance leading-[1]">
-                    {p.title}
-                  </h2>
-
-                  <dl className="mt-8 grid grid-cols-2 gap-6 border-y border-border py-6 text-sm">
-                    <div>
-                      <dt className="text-[10px] tracking-eyebrow uppercase text-foreground/50">Duration</dt>
-                      <dd className="mt-1 font-semibold">{p.duration}</dd>
-                    </div>
-                    <div>
-                      <dt className="text-[10px] tracking-eyebrow uppercase text-foreground/50">Genre</dt>
-                      <dd className="mt-1 font-semibold">{p.genre}</dd>
-                    </div>
-                  </dl>
-
-                  <p className="mt-6 text-base md:text-lg leading-relaxed text-foreground/80">
-                    {p.synopsis}
-                  </p>
-
-                  <div className="mt-6 flex gap-3">
-                    <span className="text-[10px] tracking-eyebrow uppercase text-foreground/50 mt-1">Impact</span>
-                    <p className="text-sm leading-relaxed text-foreground/70 flex-1">{p.impact}</p>
-                  </div>
-                </div>
-              </article>
-            );
-          })}
-        </div>
-      </section>
     </>
   );
 }

@@ -1,7 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Link } from "@tanstack/react-router";
 import { ArrowRight, Play } from "lucide-react";
-import { projects } from "@/data/projects";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -21,8 +20,6 @@ export const Route = createFileRoute("/")({
 });
 
 function Index() {
-  const featured = projects.slice(0, 3);
-
   return (
     <>
       {/* HERO */}
@@ -42,7 +39,7 @@ function Index() {
           <span className="text-[11px] font-semibold tracking-eyebrow uppercase text-white/70">
             Full Stop Pictures · Est. South Africa
           </span>
-          <h1 className="mt-5 max-w-6xl text-[clamp(1.5rem,7vw,2.75rem)] md:text-7xl lg:text-8xl font-extrabold text-white tracking-display leading-[1.02] md:leading-[0.95]">
+          <h1 className="mt-5 max-w-6xl text-[clamp(1.5rem,7vw,2.75rem)] md:text-5xl lg:text-7xl xl:text-8xl font-extrabold text-white tracking-display leading-[1.02] md:leading-[0.95]">
             <span className="block whitespace-nowrap">Authentic African Stories<span className="text-crimson">.</span></span>
             <span className="block">Told boldly<span className="text-crimson">.</span></span>
           </h1>
@@ -76,49 +73,6 @@ function Index() {
               <div className="mt-2 text-xs tracking-eyebrow uppercase text-white/60">{v}</div>
             </div>
           ))}
-        </div>
-      </section>
-
-      {/* FEATURED PROJECTS */}
-      <section className="bg-background">
-        <div className="mx-auto max-w-[1400px] px-6 lg:px-10 py-24 md:py-32">
-          <div className="flex items-end justify-between flex-wrap gap-6">
-            <div className="max-w-2xl">
-              <span className="text-[11px] font-semibold tracking-eyebrow uppercase text-crimson">Featured work</span>
-              <h2 className="mt-4 text-4xl md:text-5xl font-extrabold tracking-display text-balance">
-                Stories shaping the future of African cinema.
-              </h2>
-            </div>
-            <Link to="/projects" className="text-[12px] font-semibold tracking-eyebrow uppercase text-crimson inline-flex items-center gap-2">
-              All projects <ArrowRight size={14} />
-            </Link>
-          </div>
-
-          <div className="mt-14 grid gap-8 md:grid-cols-3">
-            {featured.map((p) => (
-              <Link
-                key={p.title}
-                to="/projects"
-                className="group relative block aspect-[3/4] overflow-hidden bg-ink"
-              >
-                <img
-                  src={p.image}
-                  alt={p.title}
-                  loading="lazy"
-                  className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 card-vignette" />
-                <div className="absolute inset-x-0 bottom-0 p-7 text-white">
-                  <div className="text-[10px] tracking-eyebrow uppercase text-crimson font-semibold">{p.type} · {p.genre}</div>
-                  <h3 className="mt-2 text-2xl font-extrabold tracking-display leading-tight">{p.title}</h3>
-                  <p className="mt-3 text-xs text-white/70 leading-relaxed line-clamp-3">{p.synopsis}</p>
-                  <div className="mt-4 inline-flex items-center gap-2 text-[10px] tracking-eyebrow uppercase text-white/80 group-hover:text-crimson transition-colors">
-                    Explore <ArrowRight size={12} />
-                  </div>
-                </div>
-              </Link>
-            ))}
-          </div>
         </div>
       </section>
 
