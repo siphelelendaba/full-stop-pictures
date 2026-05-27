@@ -47,19 +47,33 @@ const SERVICES = [
 ];
 
 function ServicesPage() {
+  const collage = [
+    "/services/img1.jpg",
+    "/services/img2.jpg",
+    "/services/img3.jpg",
+    "/services/img4.jpg",
+    "/services/img5.jpg",
+    "/services/img6.jpg",
+    "/services/img7.jpg",
+    "/services/img8.jpg",
+    "/services/img9.jpg",
+    "/services/img10.jpg",
+  ];
   return (
     <section className="relative bg-ink text-white min-h-screen overflow-hidden">
-      {/* Background collage placeholder — upload assets to /public/services and they'll show here */}
+      {/* Background photo collage */}
+      <div aria-hidden className="absolute inset-0 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 grid-rows-2 opacity-25">
+        {collage.map((src, i) => (
+          <div key={i} className="relative overflow-hidden">
+            <img src={src} alt="" className="absolute inset-0 h-full w-full object-cover" loading="lazy" />
+          </div>
+        ))}
+      </div>
       <div
         aria-hidden
-        className="absolute inset-0 opacity-20 mix-blend-luminosity"
-        style={{
-          backgroundImage: "url('/services/collage.jpg')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
+        className="absolute inset-0"
+        style={{ background: "linear-gradient(180deg, rgba(20,18,40,0.92) 0%, rgba(20,18,40,0.78) 40%, rgba(20,18,40,0.96) 100%)" }}
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-ink/90 via-ink/70 to-ink/95" style={{ background: "linear-gradient(180deg, rgba(20,18,40,0.85) 0%, rgba(20,18,40,0.6) 40%, rgba(20,18,40,0.95) 100%)" }} />
 
       <div className="relative z-10 mx-auto max-w-[1400px] px-6 lg:px-10 pt-36 pb-24 md:pt-44 md:pb-32">
         <span className="text-[11px] font-semibold tracking-eyebrow uppercase text-crimson">What we do</span>
@@ -74,7 +88,7 @@ function ServicesPage() {
           {SERVICES.map(({ label, Icon }) => (
             <div
               key={label}
-              className="group bg-ink/70 backdrop-blur-sm p-8 flex items-center gap-5 hover:bg-crimson/90 transition-colors"
+              className="group bg-ink/80 backdrop-blur-md p-8 flex items-center gap-5 hover:bg-crimson/90 transition-colors"
             >
               <Icon size={32} className="text-crimson group-hover:text-white shrink-0" />
               <div className="text-lg font-extrabold tracking-display leading-tight">{label}</div>
