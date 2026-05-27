@@ -121,20 +121,7 @@ function ProjectsPage() {
         </div>
       </section>
 
-      <section className="bg-background pt-24 pb-20 md:pt-32 md:pb-28">
-        <div className="mx-auto max-w-[1400px] px-6 lg:px-10">
-          <span className="text-[11px] font-semibold tracking-eyebrow uppercase text-crimson">Project slates</span>
-          <h1 className="mt-5 max-w-5xl text-5xl md:text-7xl font-extrabold tracking-display text-balance leading-[1]">
-            The slate<span className="text-crimson">.</span>
-          </h1>
-          <p className="mt-6 max-w-2xl text-lg text-foreground/70 leading-relaxed">
-            Six commercially viable, culturally rich projects developed for global VOD platforms
-            and free-to-air partners.
-          </p>
-        </div>
-      </section>
-
-      <section className="bg-background">
+      <section className="bg-background pt-20 md:pt-24">
         <div className="mx-auto max-w-[1400px] px-6 lg:px-10 pb-24 md:pb-32 space-y-28 md:space-y-40">
           {projects.map((p, idx) => {
             const reverse = idx % 2 === 1;

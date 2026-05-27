@@ -18,7 +18,7 @@ export const Route = createFileRoute("/contact")({
   component: ContactPage,
 });
 
-const ADDRESS = "44 Stanley Ave, Braamfontein Werf, Johannesburg, 2092";
+const ADDRESS = "36 Wroxham Road, Paulshof, Sandton";
 const MAP_SRC = `https://www.google.com/maps?q=${encodeURIComponent(ADDRESS)}&output=embed`;
 
 function ContactPage() {
@@ -40,12 +40,12 @@ function ContactPage() {
       <section className="bg-background">
         <div className="mx-auto max-w-[1400px] px-6 lg:px-10 py-24 md:py-32 grid md:grid-cols-3 gap-8">
           <a
-            href="tel:+27727752307"
+            href="tel:+27799454833"
             className="group p-10 border border-border bg-background hover:bg-muted transition-colors"
           >
             <Phone className="text-crimson" size={28} />
             <div className="mt-8 text-[11px] tracking-eyebrow uppercase text-foreground/50 font-semibold">Phone</div>
-            <div className="mt-2 text-2xl font-extrabold tracking-display">072 775 2307</div>
+            <div className="mt-2 text-2xl font-extrabold tracking-display">079 945 4833</div>
             <div className="mt-6 text-[11px] tracking-eyebrow uppercase text-crimson font-semibold">
               Tap to call →
             </div>
@@ -68,9 +68,9 @@ function ContactPage() {
             <MapPin className="text-crimson" size={28} />
             <div className="mt-8 text-[11px] tracking-eyebrow uppercase text-foreground/50 font-semibold">Studio</div>
             <address className="mt-2 not-italic text-lg font-semibold leading-relaxed">
-              44 Stanley Ave,<br />
-              Braamfontein Werf,<br />
-              Johannesburg, 2092
+              36 Wroxham Road,<br />
+              Paulshof,<br />
+              Sandton
             </address>
           </div>
         </div>

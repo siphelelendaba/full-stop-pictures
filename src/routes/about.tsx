@@ -1,6 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
 import aboutImg from "@/assets/about.jpg";
-import { team } from "@/data/projects";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -81,34 +80,6 @@ function AboutPage() {
                 inspire change and foster understanding.
               </p>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-background">
-        <div className="mx-auto max-w-[1400px] px-6 lg:px-10 py-24 md:py-32">
-          <div className="max-w-3xl">
-            <span className="text-[11px] font-semibold tracking-eyebrow uppercase text-crimson">03 — Our team</span>
-            <h2 className="mt-4 text-4xl md:text-5xl font-extrabold tracking-display text-balance">
-              Meet the people behind the lens.
-            </h2>
-            <p className="mt-6 text-lg leading-relaxed text-foreground/70">
-              Full Stop Pictures is a dynamic, innovative production company uniting exceptional
-              talent in filmmaking, casting, marketing and strategy to create authentic African
-              stories — with experience spanning Hollywood, global streaming platforms and
-              celebrated local projects.
-            </p>
-          </div>
-
-          <div className="mt-16 grid gap-px bg-border md:grid-cols-2 lg:grid-cols-4">
-            {team.map((m) => (
-              <article key={m.name} className="bg-background p-8 flex flex-col">
-                <div className="h-1 w-10 bg-crimson mb-6" />
-                <h3 className="text-xl font-extrabold tracking-display">{m.name}</h3>
-                <div className="mt-1 text-[11px] font-semibold tracking-eyebrow uppercase text-crimson">{m.role}</div>
-                <p className="mt-5 text-sm leading-relaxed text-foreground/70">{m.bio}</p>
-              </article>
-            ))}
           </div>
         </div>
       </section>

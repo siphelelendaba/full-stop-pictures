@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 import { Link, useRouterState } from "@tanstack/react-router";
 import { Menu, X } from "lucide-react";
-import logoDark from "@/assets/logo-dark.png";
 
 const NAV = [
   { to: "/", label: "Home" },
   { to: "/about", label: "About" },
   { to: "/projects", label: "Projects" },
+  { to: "/services", label: "Services" },
   { to: "/contact", label: "Contact" },
 ] as const;
 
@@ -38,14 +38,11 @@ export function SiteHeader() {
     >
       <div className="mx-auto flex h-20 max-w-[1400px] items-center justify-between px-6 lg:px-10">
         <Link to="/" className="flex items-center" aria-label="Full Stop Pictures">
-          {transparent ? (
-            <span className="font-extrabold tracking-display text-white text-lg md:text-xl">
-              FULL STOP<span className="text-crimson">.</span>
-              <span className="ml-2 font-light tracking-[0.15em] text-white/90">PICTURES</span>
-            </span>
-          ) : (
-            <img src={logoDark} alt="Full Stop Pictures" className="h-7 md:h-8 w-auto" />
-          )}
+          <span className="font-extrabold tracking-display text-lg md:text-xl">
+            <span className={transparent ? "text-white" : "text-ink-brand"}>FULL STOP</span>
+            <span className="text-crimson">.</span>
+            <span className={["ml-2 font-light tracking-[0.15em]", transparent ? "text-white/90" : "text-ink-brand/80"].join(" ")}>PICTURES</span>
+          </span>
         </Link>
 
         <nav className="hidden md:flex items-center gap-10">
