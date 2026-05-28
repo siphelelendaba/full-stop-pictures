@@ -62,7 +62,7 @@ function ServicesPage() {
   return (
     <section className="relative bg-ink text-white min-h-screen overflow-hidden">
       {/* Background photo collage */}
-      <div aria-hidden className="absolute inset-0 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 grid-rows-2 opacity-25">
+      <div aria-hidden className="absolute inset-0 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 grid-rows-2 opacity-80">
         {collage.map((src, i) => (
           <div key={i} className="relative overflow-hidden">
             <img src={src} alt="" className="absolute inset-0 h-full w-full object-cover" loading="lazy" />
@@ -72,7 +72,7 @@ function ServicesPage() {
       <div
         aria-hidden
         className="absolute inset-0"
-        style={{ background: "linear-gradient(180deg, rgba(20,18,40,0.92) 0%, rgba(20,18,40,0.78) 40%, rgba(20,18,40,0.96) 100%)" }}
+        style={{ background: "linear-gradient(180deg, rgba(20,18,40,0.55) 0%, rgba(20,18,40,0.45) 40%, rgba(20,18,40,0.65) 100%)" }}
       />
 
       <div className="relative z-10 mx-auto max-w-[1400px] px-6 lg:px-10 pt-36 pb-24 md:pt-44 md:pb-32">

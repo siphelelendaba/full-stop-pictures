@@ -36,7 +36,8 @@ const sipheClips: Clip[] = [
   {
     title: "Jitney",
     kind: "Featurette",
-    href: "https://www.dropbox.com/t/coSxwiVw4pK5fzTn",
+    video: "/media/jitney.mov",
+    href: null,
   },
   {
     title: "Our Work",
