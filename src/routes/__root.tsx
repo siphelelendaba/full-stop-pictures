@@ -77,10 +77,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { title: "Full Stop Pictures — Authentic African Storytelling" },
       { name: "description", content: "Full Stop Pictures is a 100% black female-owned production company creating cinematic African stories for global audiences." },
       { name: "author", content: "Full Stop Pictures" },
-      { property: "og:title", content: "Full Stop Pictures" },
-      { property: "og:description", content: "Cinematic African stories, by Africans." },
+      { property: "og:title", content: "Full Stop Pictures — Authentic African Storytelling" },
+      { property: "og:description", content: "Full Stop Pictures is a 100% black female-owned production company creating cinematic African stories for global audiences." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
+      { name: "twitter:title", content: "Full Stop Pictures — Authentic African Storytelling" },
+      { name: "twitter:description", content: "Full Stop Pictures is a 100% black female-owned production company creating cinematic African stories for global audiences." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/d09d7129-e4b5-49d2-ba17-fe944cce649c/id-preview-bded740f--9c75a689-62e0-4a17-92f8-5e581c40f59d.lovable.app-1779943511640.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/d09d7129-e4b5-49d2-ba17-fe944cce649c/id-preview-bded740f--9c75a689-62e0-4a17-92f8-5e581c40f59d.lovable.app-1779943511640.png" },
     ],
     links: [
       {
