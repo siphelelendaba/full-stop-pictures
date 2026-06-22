@@ -65,7 +65,7 @@ function Index() {
           {[
             ["100%", "FEMALE-OWNED"],
             ["Level 1", "BBBEE Scorecard"],
-            ["5,000+", "Jobs to be created"],
+            ["5,000+", "JOBS TO BE CREATED BY 2030"],
             ["2", "Continents reached"],
           ].map(([k, v]) => (
             <div key={v} className="border-l-2 border-crimson pl-5">
