@@ -40,12 +40,12 @@ function ContactPage() {
       <section className="bg-background">
         <div className="mx-auto max-w-[1400px] px-6 lg:px-10 py-24 md:py-32 grid md:grid-cols-3 gap-8">
           <a
-            href="tel:+27799454833"
+            href="tel:+27872652010"
             className="group p-10 border border-border bg-background hover:bg-muted transition-colors"
           >
             <Phone className="text-crimson" size={28} />
             <div className="mt-8 text-[11px] tracking-eyebrow uppercase text-foreground/50 font-semibold">Phone</div>
-            <div className="mt-2 text-2xl font-extrabold tracking-display">079 945 4833</div>
+            <div className="mt-2 text-2xl font-extrabold tracking-display">0872652010</div>
             <div className="mt-6 text-[11px] tracking-eyebrow uppercase text-crimson font-semibold">
               Tap to call →
             </div>

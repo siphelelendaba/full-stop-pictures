@@ -10,7 +10,7 @@ export function SiteFooter() {
             <span className="ml-2 font-light tracking-[0.15em]">PICTURES</span>
           </div>
           <p className="mt-5 max-w-md text-sm leading-relaxed text-white/60">
-            A 100% black female-owned production company telling authentic African
+            A female-owned production company telling authentic African
             stories — celebrating women empowerment, cultural diversity and creative
             nuance from South Africa to the world.
           </p>
@@ -29,7 +29,7 @@ export function SiteFooter() {
         <div>
           <h4 className="text-[11px] font-semibold tracking-eyebrow uppercase text-white mb-4">Contact</h4>
           <ul className="space-y-3 text-sm">
-            <li><a href="tel:+27799454833" className="hover:text-white">079 945 4833</a></li>
+            <li><a href="tel:+27872652010" className="hover:text-white">0872652010</a></li>
             <li><a href="mailto:info@fullstoppictures.com" className="hover:text-white">info@fullstoppictures.com</a></li>
             <li className="text-white/60">36 Wroxham Road, Paulshof, Sandton</li>
           </ul>
