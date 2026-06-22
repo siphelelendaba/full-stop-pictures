@@ -119,8 +119,17 @@ function ProjectsPage() {
             ))}
           </div>
         </div>
+        <p className="mt-16 text-white/70 leading-relaxed">
+          For more information on our CEO and Founder, please visit:{" "}
+          <a
+            href="https://www.siphesihlendaba.com"
+            target="_blank"
+            rel="noreferrer"
+            className="text-crimson hover:text-white font-semibold"
+          >
+            www.siphesihlendaba.com
+          </a>
+        </p>
       </section>
-
-    </>
   );
 }
