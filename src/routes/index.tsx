@@ -6,7 +6,7 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Full Stop Pictures — Cinematic African Stories" },
-      { name: "description", content: "A 100% black female-owned production company telling authentic African stories for global audiences." },
+      { name: "description", content: "A female-owned production company telling authentic African stories for global audiences." },
       { property: "og:title", content: "Full Stop Pictures" },
       { property: "og:description", content: "Cinematic African stories, by Africans." },
       { property: "og:image", content: "/og-image.jpg" },
@@ -44,7 +44,7 @@ function Index() {
             <span className="block">Told boldly<span className="text-crimson">.</span></span>
           </h1>
           <p className="mt-6 max-w-xl text-base md:text-lg text-white/75 leading-relaxed">
-            A 100% black female-owned production company crafting cinematic narratives that
+            A female-owned production company crafting cinematic narratives that
             celebrate women empowerment, cultural diversity and creative nuance.
           </p>
           <div className="mt-10 flex flex-wrap items-center gap-4">
