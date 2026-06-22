@@ -63,7 +63,7 @@ function Index() {
       <section className="bg-ink text-white">
         <div className="mx-auto max-w-[1400px] px-6 lg:px-10 py-16 grid grid-cols-2 md:grid-cols-4 gap-8">
           {[
-            ["100%", "Black female-owned"],
+            ["100%", "FEMALE-OWNED"],
             ["Level 1", "BBBEE Scorecard"],
             ["5,000+", "Jobs to be created"],
             ["2", "Continents reached"],
